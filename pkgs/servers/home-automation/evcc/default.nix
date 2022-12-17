@@ -7,7 +7,6 @@
 , git
 , enumer
 , mockgen
-, nodejs
 , npmHooks
 , nix-update-script
 , nixosTests
@@ -33,7 +32,6 @@ buildGoModule rec {
   };
 
   nativeBuildInputs = [
-    nodejs
     npmHooks.npmConfigHook
   ];
 

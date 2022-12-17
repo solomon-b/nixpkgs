@@ -96,7 +96,7 @@ npmConfigHook() {
 
     local -r lockfileVersion="$(@jq@ .lockfileVersion package-lock.json)"
 
-    npm rebuild "${npmRebuildFlags[@]}" "${npmFlags[@]}"
+    npm rebuild $npmRebuildFlags "${npmRebuildFlagsArray[@]}" $npmFlags "${npmFlagsArray[@]}"
 
     patchShebangs node_modules
 
